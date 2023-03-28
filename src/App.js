@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import { useEffect, useState } from "react";
+import React from "react";
+import photo from "./advice.jpg";
+import './App.css'
+
+function App(){
+  const [advice, setAdvice] = useState ("");
+
+
+   const getAdvice = async()=>{
+      const response = await fetch("http://www.boredapi.com/api/activity/ ")
+      const data = await response.json();
+      setAdvice(data.activity)
+    console.log(data.activity)
+    };
+
+  useEffect(() =>{
+    getAdvice();
+   },[]  )
+
+  return(
+    <div className="container" >
+      <div className="new">
+        <p>{advice}</p>
+      </div>
+      <div className="button">
+        <button onClick={getAdvice} className="btn">Get new advice</button>
+      </div>
+      <img src ={photo} alt = "photo" className="photo"  />
+      
     </div>
-  );
-}
+  )
 
+
+}
 export default App;
