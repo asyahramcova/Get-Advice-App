@@ -8,11 +8,10 @@ function App(){
   const [advice, setAdvice] = useState ("");
 
 
-   const getAdvice = async()=>{
+  const getAdvice = async()=>{
       const response = await fetch("http://www.boredapi.com/api/activity/ ")
       const data = await response.json();
       setAdvice(data.activity)
-    console.log(data.activity)
     };
 
   useEffect(() =>{
@@ -27,6 +26,7 @@ function App(){
       <div className="button">
         <button onClick={getAdvice} className="btn">Get new advice</button>
       </div>
+
       <img src ={photo} alt = "photo" className="photo"  />
       
     </div>
