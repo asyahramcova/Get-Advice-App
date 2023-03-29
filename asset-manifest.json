@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Get-Advice-App/static/css/main.3b2067b1.css",
+    "main.js": "/Get-Advice-App/static/js/main.71caf9a4.js",
+    "static/js/787.2a090959.chunk.js": "/Get-Advice-App/static/js/787.2a090959.chunk.js",
+    "static/media/advice.jpg": "/Get-Advice-App/static/media/advice.212ed7338bc0646ef958.jpg",
+    "index.html": "/Get-Advice-App/index.html",
+    "main.3b2067b1.css.map": "/Get-Advice-App/static/css/main.3b2067b1.css.map",
+    "main.71caf9a4.js.map": "/Get-Advice-App/static/js/main.71caf9a4.js.map",
+    "787.2a090959.chunk.js.map": "/Get-Advice-App/static/js/787.2a090959.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b2067b1.css",
+    "static/js/main.71caf9a4.js"
+  ]
+}
